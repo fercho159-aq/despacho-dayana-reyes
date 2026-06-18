@@ -27,9 +27,9 @@
   --c-gris-suave:    #6E6E75;   /* Texto secundario */
   --c-gris-borde:    #E4DED4;   /* Bordes sutiles */
 
-  /* Tipografía */
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Tipografía — Oswald para títulos/menú, Poppins para cuerpo */
+  --font-serif: 'Oswald', 'Arial Narrow', Impact, sans-serif;   /* titulares y menú */
+  --font-sans:  'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   /* Escala tipográfica fluida (clamp = responsive sin media queries) */
   --fs-hero:   clamp(2rem, 7vw, 3.75rem);
@@ -110,10 +110,10 @@ button { cursor: pointer; background: none; border: none; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  line-height: 1.15;
+  line-height: 1.18;
   color: var(--c-marino);
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 /* Bloqueo de scroll cuando el menú móvil está abierto */
@@ -327,8 +327,10 @@ body.no-scroll { overflow: hidden; }
 .nav__link {
   display: inline-block;
   padding: 0.5rem 0.85rem;
-  font-size: 0.92rem;
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
   font-weight: 500;
+  letter-spacing: 0.04em;
   color: var(--c-marino);
   border-radius: var(--radius-pill);
   position: relative;
@@ -478,7 +480,7 @@ body.no-scroll { overflow: hidden; }
   max-width: 16ch;
 }
 .hero__title em {
-  font-style: italic;
+  font-style: normal;
   color: var(--c-oro-claro);
 }
 .hero__lead {
