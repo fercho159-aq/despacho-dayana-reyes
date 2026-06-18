@@ -11,9 +11,9 @@
    ----------------------------------------------------------------- */
 :root {
   /* Paleta de marca — Guinda/Vino, Oro, Azul Marino, Negro */
-  --c-guinda:        #6E1B2C;   /* Color primario de marca */
-  --c-guinda-dark:   #4E1320;   /* Guinda profundo (gradientes/hover) */
-  --c-guinda-soft:   #8a2c3f;   /* Guinda claro para detalles */
+  --c-guinda:        #1E3A5F;   /* Color primario de marca (azul marino) */
+  --c-guinda-dark:   #14283F;   /* Azul marino profundo (gradientes/hover) */
+  --c-guinda-soft:   #2C4A70;   /* Azul marino claro para detalles */
   --c-oro:           #C6A35C;   /* Oro/Dorado — acentos y CTA */
   --c-oro-dark:      #A9863F;   /* Oro intenso (hover) */
   --c-oro-claro:     #E4CE9A;   /* Oro luminoso (texto sobre fondo oscuro) */
@@ -229,12 +229,12 @@ body.no-scroll { overflow: hidden; }
 .btn--primary {
   background: var(--c-guinda);
   color: #fff;
-  box-shadow: 0 8px 22px rgba(110, 27, 44, 0.28);
+  box-shadow: 0 8px 22px rgba(30, 58, 95, 0.28);
 }
 .btn--primary:hover {
   background: var(--c-guinda-dark);
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(110, 27, 44, 0.36);
+  box-shadow: 0 12px 28px rgba(30, 58, 95, 0.36);
 }
 
 .btn--gold {
@@ -435,7 +435,7 @@ body.no-scroll { overflow: hidden; }
   position: relative;
   margin-top: var(--header-h);
   background:
-    radial-gradient(110% 120% at 85% 0%, rgba(110,27,44,0.55) 0%, transparent 55%),
+    radial-gradient(110% 120% at 85% 0%, rgba(30,58,95,0.55) 0%, transparent 55%),
     linear-gradient(160deg, var(--c-marino) 0%, var(--c-marino-dark) 55%, var(--c-guinda-dark) 130%);
   color: #fff;
   overflow: hidden;
@@ -608,7 +608,7 @@ body.no-scroll { overflow: hidden; }
   width: 54px; height: 54px;
   display: grid; place-items: center;
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(110,27,44,0.10), rgba(198,163,92,0.16));
+  background: linear-gradient(135deg, rgba(30,58,95,0.10), rgba(198,163,92,0.16));
   color: var(--c-guinda);
   margin-bottom: 1.25rem;
 }
@@ -706,7 +706,7 @@ body.no-scroll { overflow: hidden; }
 .cta-band {
   position: relative;
   background:
-    radial-gradient(120% 140% at 0% 0%, rgba(110,27,44,0.6), transparent 50%),
+    radial-gradient(120% 140% at 0% 0%, rgba(30,58,95,0.6), transparent 50%),
     linear-gradient(150deg, var(--c-marino), var(--c-marino-dark));
   color: #fff;
   overflow: hidden;
@@ -789,7 +789,7 @@ body.no-scroll { overflow: hidden; }
 .page-hero {
   margin-top: var(--header-h);
   background:
-    radial-gradient(100% 120% at 90% 0%, rgba(110,27,44,0.5), transparent 55%),
+    radial-gradient(100% 120% at 90% 0%, rgba(30,58,95,0.5), transparent 55%),
     linear-gradient(160deg, var(--c-marino), var(--c-marino-dark));
   color: #fff;
   padding-block: clamp(2.75rem, 7vw, 4.5rem);
@@ -891,7 +891,7 @@ body.no-scroll { overflow: hidden; }
   outline: none;
   border-color: var(--c-guinda);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(110,27,44,0.12);
+  box-shadow: 0 0 0 3px rgba(30,58,95,0.12);
 }
 .field textarea { resize: vertical; min-height: 130px; }
 .field--invalid input,
@@ -932,7 +932,7 @@ body.no-scroll { overflow: hidden; }
   margin: 0 auto 1rem;
   display: grid; place-items: center;
   border-radius: 50%;
-  background: rgba(110,27,44,0.1);
+  background: rgba(30,58,95,0.1);
   color: var(--c-guinda);
 }
 .form__success .check svg { width: 32px; height: 32px; }
@@ -956,7 +956,7 @@ body.no-scroll { overflow: hidden; }
   flex-shrink: 0;
   display: grid; place-items: center;
   border-radius: 10px;
-  background: linear-gradient(135deg, rgba(110,27,44,0.1), rgba(198,163,92,0.18));
+  background: linear-gradient(135deg, rgba(30,58,95,0.1), rgba(198,163,92,0.18));
   color: var(--c-guinda);
 }
 .contact-info__icon svg { width: 22px; height: 22px; }

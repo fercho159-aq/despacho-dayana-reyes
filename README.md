@@ -53,7 +53,7 @@ Toda la personalización visual se centraliza en las **variables CSS** (`:root` 
 
 | Variable          | Uso                       | Valor por defecto |
 |-------------------|---------------------------|-------------------|
-| `--c-guinda`      | Color primario de marca   | `#6E1B2C`         |
+| `--c-guinda`      | Color primario (azul marino) | `#1E3A5F`      |
 | `--c-oro`         | Acentos dorados / CTA     | `#C6A35C`         |
 | `--c-marino`      | Header, footer, fondos    | `#122036`         |
 | `--font-serif`    | Títulos (Playfair Display)| serif elegante    |
