@@ -14,9 +14,9 @@
   --c-guinda:        #1E3A5F;   /* Color primario de marca (azul marino) */
   --c-guinda-dark:   #14283F;   /* Azul marino profundo (gradientes/hover) */
   --c-guinda-soft:   #2C4A70;   /* Azul marino claro para detalles */
-  --c-oro:           #C6A35C;   /* Oro/Dorado — acentos y CTA */
-  --c-oro-dark:      #A9863F;   /* Oro intenso (hover) */
-  --c-oro-claro:     #E4CE9A;   /* Oro luminoso (texto sobre fondo oscuro) */
+  --c-oro:           #A6A09F;   /* Plata — acentos y CTA */
+  --c-oro-dark:      #8C8685;   /* Plata intenso (hover) */
+  --c-oro-claro:     #C4BEBD;   /* Plata luminoso (texto sobre fondo oscuro) */
   --c-marino:        #122036;   /* Azul marino oscuro — header/footer */
   --c-marino-dark:   #0B1424;   /* Marino casi negro */
   --c-negro:         #0E0E10;
