@@ -181,7 +181,7 @@
     + '    <a class="wa-bubble__link" href="' + WA + '" target="_blank" rel="noopener">'
     + '      <span class="wa-bubble__head">'
     + '        <span class="wa-bubble__avatar" aria-hidden="true">DR</span>'
-    + '        <span class="wa-bubble__meta"><strong>Lic. Dayana Reyes</strong><span class="wa-bubble__status"><span class="wa-dot" aria-hidden="true"></span> En línea ahora</span></span>'
+    + '        <span class="wa-bubble__meta"><strong>Mtra. Dayana Reyes</strong><span class="wa-bubble__status"><span class="wa-dot" aria-hidden="true"></span> En línea ahora</span></span>'
     + '      </span>'
     + '      <span class="wa-bubble__msg">⚠️ ¿Su empresa enfrenta una demanda o inspección? <strong>Los plazos legales corren en su contra</strong> y cada día cuenta. No arriesgue su patrimonio: reciba atención hoy mismo.</span>'
     + '      <span class="wa-bubble__cta">Chatear ahora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>'
