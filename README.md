@@ -83,10 +83,10 @@ Los siguientes datos son **marcadores de posición**. Sustitúyalos por los real
 |----------------------------------------------|-----------------------------------------|
 | `+52 55 1234 5678` / `tel:+525512345678`     | Teléfono real del despacho              |
 | `5215512345678` (enlaces de WhatsApp)        | Número de WhatsApp corporativo real     |
-| `contacto@dayanareyesabogados.mx`            | Correo real                             |
-| `privacidad@dayanareyesabogados.mx`          | Correo para derechos ARCO               |
-| `Av. Paseo de la Reforma 250…`               | Domicilio fiscal/real en CDMX           |
-| `https://www.dayanareyesabogados.mx/`        | Dominio definitivo (canonical, OG, schema, sitemap) |
+| `contacto@dayanareyesabogados.com`            | Correo real                             |
+| `contacto@dayanareyesabogados.com`          | Correo para derechos ARCO               |
+| `Las Huertas 104…`               | Domicilio fiscal/real en CDMX           |
+| `https://www.dayanareyesabogados.com/`        | Dominio definitivo (canonical, OG, schema, sitemap) |
 | Cifras del hero (`+15`, `+500`, `+300`)      | Métricas reales y verificables          |
 | Casos de éxito (montos y resultados)         | Casos reales **con datos anonimizados** |
 | Enlaces de redes (`sameAs`, footer)          | URLs reales de LinkedIn / Facebook      |

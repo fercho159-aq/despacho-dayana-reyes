@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.dayanareyesabogados.mx/sitemap.xml
+Sitemap: https://www.dayanareyesabogados.com/sitemap.xml
