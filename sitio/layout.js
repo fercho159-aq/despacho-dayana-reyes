@@ -105,7 +105,7 @@
     + '                <li><a href="actualidad-legal.html#seminarios">Seminarios presenciales</a></li>'
     + '                <li><a href="actualidad-legal.html#talleres">Talleres presenciales</a></li>'
     + '                <li><a href="actualidad-legal.html#podcasts">Podcasts</a></li>'
-    + '                <li><a href="actualidad-legal.html#notas">Notas periodísticas</a></li>'
+    + '                <li><a href="blog.html">Notas periodísticas</a></li>'
     + '              </ul>'
     + '            </div>'
     + '          </div>'

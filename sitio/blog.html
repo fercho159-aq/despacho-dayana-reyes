@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas Periodísticas | Dayana Reyes y Abogados</title>
+  <meta name="description" content="Noticias, publicaciones y artículos de interés sobre derecho laboral y corporativo.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#122036">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E3A5F'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23E4CE9A'%3EDR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .news-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .news-item {
+      border-left: 2px solid #C4A265;
+      padding-left: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .news-item:hover {
+      transform: translateX(5px);
+      opacity: 0.85;
+    }
+    .news-item__date {
+      font-size: 0.85rem;
+      color: #666;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .news-item__title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1E3A5F;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    .news-item__text {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body data-page="actualidad">
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="index.html">Inicio</a> <span aria-hidden="true">/</span>
+          <span aria-current="page">Notas Periodísticas</span>
+        </nav>
+        <h1 class="page-hero__title">Notas Periodísticas</h1>
+        <p class="page-hero__lead">Intervenciones, opiniones y noticias en los principales medios de comunicación sobre temas de derecho laboral y empresarial.</p>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <div class="news-grid">
+          
+          <!-- Nota 1 -->
+          <a href="nota-jornada-laboral.html" class="news-item">
+            <p class="news-item__date">Mayo 2026</p>
+            <h3 class="news-item__title">El Economista: Estímulos fiscales por jornada laboral de 40 horas</h3>
+            <p class="news-item__text">Mención y opinión de la Mtra. Dayana Reyes sobre la importancia de analizar el impacto económico en Mipymes ante la reforma de reducción de jornada.</p>
+          </a>
+
+          <!-- Nota 2 -->
+          <a href="nota-riesgos-reglas.html" class="news-item">
+            <p class="news-item__date">Enero 2026</p>
+            <h3 class="news-item__title">El Economista: Riesgos y reglas de la jornada laboral de 40 horas</h3>
+            <p class="news-item__text">Participación de la Mtra. Dayana Reyes como moderadora en el conversatorio de la Barra Mexicana de Abogados (BMA) alertando riesgos de simulación.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="layout.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
