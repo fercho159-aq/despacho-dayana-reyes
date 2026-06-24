@@ -1233,3 +1233,262 @@ body.no-scroll { overflow: hidden; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* -----------------------------------------------------------------
+   17. NAVEGACIÓN CON SUBMENÚ DESPLEGABLE ("La Firma")
+   ----------------------------------------------------------------- */
+.nav__item { position: relative; }
+
+.nav__dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+.nav__dropdown-toggle .chevron {
+  width: 13px; height: 13px;
+  transition: transform var(--t-fast);
+}
+.nav__item.is-open .nav__dropdown-toggle .chevron { transform: rotate(180deg); }
+
+.nav__submenu { list-style: none; margin: 0; padding: 0; }
+
+/* DESKTOP: panel flotante al pasar el cursor / foco */
+@media (min-width: 900px) {
+  .nav__submenu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 235px;
+    background: #fff;
+    border: 1px solid var(--c-gris-borde);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity var(--t-fast), transform var(--t-fast), visibility var(--t-fast);
+    z-index: 1001;
+  }
+  /* puente invisible para que el hover no se corte al bajar el cursor */
+  .nav__submenu::before {
+    content: "";
+    position: absolute;
+    top: -8px; left: 0; right: 0; height: 8px;
+  }
+  .nav__item:hover .nav__submenu,
+  .nav__item:focus-within .nav__submenu,
+  .nav__item.is-open .nav__submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .nav__submenu a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--c-marino);
+    transition: background var(--t-fast), color var(--t-fast);
+  }
+  .nav__submenu a:hover { background: var(--c-crema); color: var(--c-guinda); }
+}
+
+/* MÓVIL: submenú como acordeón dentro del panel lateral */
+@media (max-width: 899px) {
+  .nav__dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+    color: rgba(255,255,255,0.9);
+    padding: 0.9rem 0.75rem;
+    font-size: 1.05rem;
+  }
+  .nav__submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--t-base);
+    padding-left: 0.75rem;
+  }
+  .nav__item.is-open .nav__submenu { max-height: 360px; }
+  .nav__submenu a {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.98rem;
+    color: rgba(255,255,255,0.72);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav__submenu a:hover { color: var(--c-oro-claro); }
+}
+
+/* -----------------------------------------------------------------
+   18. COMPONENTES — Misión/Visión, Valores, Equipo, Artículos
+   ----------------------------------------------------------------- */
+/* Misión / Visión */
+.mv-grid { display: grid; gap: 1.5rem; }
+@media (min-width: 768px) { .mv-grid { grid-template-columns: 1fr 1fr; } }
+.mv-card {
+  background: var(--c-marino);
+  color: rgba(255,255,255,0.85);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid rgba(198,163,92,0.25);
+}
+.mv-card__icon {
+  width: 54px; height: 54px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: rgba(198,163,92,0.15);
+  color: var(--c-oro-claro);
+  margin-bottom: 1.25rem;
+}
+.mv-card__icon svg { width: 28px; height: 28px; }
+.mv-card h3 { color: #fff; font-size: var(--fs-h3); margin-bottom: 0.75rem; }
+.mv-card p { color: rgba(255,255,255,0.78); }
+
+/* Valores */
+.values { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .values { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .values { grid-template-columns: repeat(3, 1fr); } }
+.value {
+  display: flex; gap: 1rem; align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--c-gris-borde);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+}
+.value__icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  display: grid; place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(30,58,95,0.1), rgba(198,163,92,0.18));
+  color: var(--c-guinda);
+}
+.value__icon svg { width: 22px; height: 22px; }
+.value h4 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+.value p { font-size: 0.9rem; color: var(--c-gris-suave); }
+
+/* Equipo */
+.team { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .team { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .team { grid-template-columns: repeat(3, 1fr); } }
+.member {
+  background: #fff;
+  border: 1px solid var(--c-gris-borde);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--t-base), box-shadow var(--t-base);
+}
+.member:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.member__photo {
+  aspect-ratio: 4/5;
+  background: linear-gradient(160deg, var(--c-marino), var(--c-guinda));
+  display: grid; place-items: center;
+  color: var(--c-oro-claro);
+  font-family: var(--font-serif);
+  font-size: 3rem;
+}
+.member__body { padding: 1.4rem; }
+.member__name { font-size: 1.15rem; margin-bottom: 0.2rem; }
+.member__role {
+  font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--c-oro-dark); font-weight: 600; font-family: var(--font-sans);
+}
+.member__bio { margin-top: 0.75rem; font-size: 0.88rem; color: var(--c-gris-suave); }
+
+/* Artículos (Actualidad Legal) */
+.posts { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .posts { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .posts { grid-template-columns: repeat(3, 1fr); } }
+.post {
+  background: #fff; border: 1px solid var(--c-gris-borde);
+  border-radius: var(--radius-lg); overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform var(--t-base), box-shadow var(--t-base);
+}
+.post:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.post__media {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--c-marino), var(--c-guinda-soft));
+  display: grid; place-items: center; color: var(--c-oro-claro);
+}
+.post__media svg { width: 38px; height: 38px; opacity: 0.7; }
+.post__body { padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; }
+.post__date { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-oro-dark); font-weight: 600; }
+.post__title { font-size: 1.1rem; margin: 0.5rem 0 0.6rem; }
+.post__excerpt { font-size: 0.9rem; color: var(--c-gris-suave); flex-grow: 1; }
+.post__link { margin-top: 1rem; font-weight: 600; font-size: 0.88rem; color: var(--c-guinda); }
+
+/* Aviso de contenido provisional (borrador) */
+.draft-note {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(198,163,92,0.14);
+  border: 1px dashed var(--c-oro-dark);
+  color: var(--c-oro-dark);
+  font-size: 0.78rem; font-weight: 600;
+  padding: 0.5rem 1rem; border-radius: var(--radius-pill);
+  margin-bottom: 1.5rem;
+}
+.draft-note svg { width: 15px; height: 15px; }
+
+/* -----------------------------------------------------------------
+   19. MEGAMENÚ MINIMALISTA (desktop) — paneles con columnas
+   ----------------------------------------------------------------- */
+@media (min-width: 900px) {
+  .nav__submenu--mega {
+    left: auto;
+    right: 0;
+    width: 540px;
+    max-width: calc(100vw - 2rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem 1.25rem;
+    padding: 1.4rem;
+  }
+  .mega-col__title {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--c-guinda);
+    padding: 0 0.8rem 0.5rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid var(--c-gris-borde);
+  }
+  .mega-col ul { list-style: none; margin: 0; padding: 0; }
+}
+
+/* En móvil el megamenú se apila como acordeón (misma estructura del panel) */
+@media (max-width: 899px) {
+  .mega-col__title {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: var(--c-oro-claro);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.85rem 0.5rem 0.3rem;
+  }
+  .nav__item.is-open .nav__submenu { max-height: 1400px; }
+}
+
+/* -----------------------------------------------------------------
+   20. PERFILES DE EQUIPO — especialidad y enlaces
+   ----------------------------------------------------------------- */
+.member__spec { font-size: 0.86rem; color: var(--c-guinda); font-weight: 600; margin-top: 0.25rem; }
+.member__links { display: flex; gap: 0.55rem; margin-top: 1rem; }
+.member__links a {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--c-gris-borde);
+  color: var(--c-marino);
+  transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+.member__links a:hover { background: var(--c-guinda); color: #fff; border-color: var(--c-guinda); }
+.member__links svg { width: 16px; height: 16px; }
