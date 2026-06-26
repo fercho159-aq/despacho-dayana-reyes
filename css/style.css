@@ -296,7 +296,7 @@ body.no-scroll { overflow: hidden; }
 /* Logo */
 .logo { display: flex; align-items: center; gap: 0.7rem; }
 .logo__img {
-  height: 44px; /* Ajusta este valor si necesitas que el logo sea más grande o más chico */
+  height: 77px; /* Aumentado 75% (antes 44px) */
   width: auto;
   max-width: 100%;
   object-fit: contain;
