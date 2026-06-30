@@ -15,3 +15,7 @@ desktop.ini
 
 # Dependencias (por si en el futuro se añade tooling)
 node_modules/
+
+# Documentos personales (CV, cartas) — no publicar en el repo
+/*.pdf
+/*.docx
