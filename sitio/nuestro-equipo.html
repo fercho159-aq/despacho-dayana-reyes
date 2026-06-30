@@ -12,6 +12,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .cred-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+    @media (min-width: 720px) { .cred-grid { grid-template-columns: 1fr 1fr; } }
+    .cred { background: var(--c-blanco); border: 1px solid var(--c-gris-borde); border-radius: 14px; padding: 1.6rem 1.6rem 1.4rem; box-shadow: var(--shadow-sm); }
+    .cred--wide { grid-column: 1 / -1; }
+    .cred__title { display: flex; align-items: center; gap: 0.6rem; font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--c-guinda); font-size: 1.12rem; margin: 0 0 1rem; padding-bottom: 0.65rem; border-bottom: 2px solid var(--c-oro); }
+    .cred__title svg { width: 22px; height: 22px; color: var(--c-oro-dark); flex-shrink: 0; }
+    .cred__list { display: grid; gap: 0.7rem; margin: 0; padding: 0; list-style: none; }
+    .cred__list li { position: relative; padding-left: 1.1rem; color: var(--c-gris-texto); font-size: 0.92rem; line-height: 1.55; }
+    .cred__list li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--c-oro); }
+    .cred__list strong { color: var(--c-marino); }
+  </style>
 </head>
 <body data-page="equipo">
   <main id="main">
@@ -42,7 +54,7 @@
               <h3 class="member__name">Mtra. Dayana Talissa Reyes López</h3>
               <p class="member__role">Socia fundadora</p>
               <p class="member__spec">Derecho Laboral Empresarial</p>
-              <p class="member__bio">Socia fundadora de la Firma y encargada de dirigir la práctica de Derecho Laboral Empresarial. Es licenciada y maestra en Derecho Laboral por la Universidad Panamericana, campus Mixcoac, con amplia trayectoria en consultoría preventiva, cumplimiento normativo y defensa del sector patronal en México.</p>
+              <p class="member__bio">Socia fundadora de la Firma y encargada de dirigir la práctica de Derecho Laboral Empresarial. Licenciada y maestra en Derecho Laboral por la Universidad Panamericana, es además profesora universitaria de la materia y Secretaria de la Comisión de Derecho del Trabajo y Seguridad Social de la Barra Mexicana, Colegio de Abogados. Cuenta con amplia trayectoria en consultoría preventiva, cumplimiento normativo y defensa del sector patronal en México. <a href="#perfil-dayana">Ver perfil profesional completo →</a></p>
               <div class="member__links">
                 <a href="mailto:dreyes@dayanareyesabogados.com" aria-label="Correo de Dayana Reyes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
                 <a href="#" aria-label="LinkedIn de Dayana Reyes (Pendiente)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V9.99H6V17h2.34zM7.17 8.93a1.36 1.36 0 1 0 0-2.72 1.36 1.36 0 0 0 0 2.72zM18 17v-3.84c0-2.05-1.1-3-2.56-3-1.18 0-1.71.65-2 1.11V9.99H11.1V17h2.34v-3.78c0-.99.42-1.42 1.1-1.42.66 0 1.12.46 1.12 1.45V17H18z"/></svg></a>
@@ -75,6 +87,88 @@
               </div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PERFIL PROFESIONAL DAYANA ===================== -->
+    <section class="section section--white" id="perfil-dayana">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Perfil profesional</p>
+          <h2 class="section-title">Mtra. Dayana Talissa Reyes López</h2>
+          <hr class="gold-rule">
+        </div>
+        <p class="prose" style="margin-bottom: 2.5rem;">Abogada especializada en Derecho Laboral Empresarial, con una sólida trayectoria que combina la práctica profesional, la docencia universitaria, la investigación jurídica y la participación activa en los principales colegios y asociaciones de la materia en México.</p>
+
+        <div class="cred-grid">
+
+          <article class="cred">
+            <h3 class="cred__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2 6 2s6-1 6-2v-5"/></svg>
+              Formación académica
+            </h3>
+            <ul class="cred__list">
+              <li><strong>Especialidad en Relaciones Laborales</strong> — Instituto de Posgrado en Derecho (2025–2026, en proceso de titulación por excelencia académica).</li>
+              <li><strong>Maestría en Derecho Laboral</strong> — Universidad Panamericana (en proceso de titulación por tesis, con mención honorífica: «Registros de Empresas Prestadoras de Servicios Especializados o Ejecutoras de Obras Especializadas»).</li>
+              <li><strong>Licenciatura en Derecho</strong> — Universidad Panamericana (2015–2020).</li>
+              <li><strong>XVI Seminario Internacional de Derecho Comparado del Trabajo «Isla de Margarita» 2025</strong>, sobre el derecho del trabajo y la alta tecnología (participante becada).</li>
+            </ul>
+          </article>
+
+          <article class="cred">
+            <h3 class="cred__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6"/></svg>
+              Experiencia docente
+            </h3>
+            <ul class="cred__list">
+              <li><strong>Universidad Panamericana</strong> — Profesora Titular de Derecho Individual del Trabajo.</li>
+              <li><strong>Universidad Panamericana</strong> — Profesora Titular de Derecho Colectivo del Trabajo.</li>
+              <li>Profesora Adjunta de Derecho Individual y Colectivo del Trabajo (Ciudad UP).</li>
+              <li>Profesora Adjunta de Historia del Derecho Mexicano e Historia del Derecho Universal (Campus Mixcoac).</li>
+              <li>Profesora invitada de Derecho Colectivo del Trabajo (huelga) en la <strong>Universidad Anáhuac México, Campus Norte</strong> (abril 2025).</li>
+            </ul>
+          </article>
+
+          <article class="cred cred--wide">
+            <h3 class="cred__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Membresías y cargos
+            </h3>
+            <ul class="cred__list">
+              <li><strong>Secretaria de la Comisión de Derecho del Trabajo y Seguridad Social</strong> de la Barra Mexicana, Colegio de Abogados, A.C. (desde 2024).</li>
+              <li>Miembro de la <strong>Barra Mexicana, Colegio de Abogados, A.C.</strong> (desde junio 2024).</li>
+              <li>Miembro de la <strong>Academia Mexicana del Derecho Procesal del Trabajo</strong>, Capítulo Quintana Roo (desde junio 2024).</li>
+              <li>Coordinadora del Comité de Derecho del Trabajo y Seguridad Social de la <strong>World Compliance Association</strong> en México (desde marzo 2026).</li>
+              <li>Coordinadora de Vinculación Educativa en el <strong>Instituto de Posgrado en Derecho</strong> (desde noviembre 2025).</li>
+              <li>Miembro de la <strong>Sociedad Mexicana de Derecho del Trabajo y de la Seguridad Social</strong> y de su Asociación de Jóvenes Juristas (desde diciembre 2025).</li>
+              <li>Miembro de <strong>COPARMEX Ciudad de México</strong> (desde octubre 2024).</li>
+            </ul>
+          </article>
+
+          <article class="cred">
+            <h3 class="cred__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+              Actividades adicionales
+            </h3>
+            <ul class="cred__list">
+              <li>Escritora en <strong>Diario Fénix</strong> (desde enero 2024) y en la revista <strong>Borderless</strong> (desde mayo 2024).</li>
+              <li>Mentora en derecho laboral y seguridad social en <strong>New Ventures</strong> (desde febrero 2024).</li>
+              <li>Participante seleccionada en el Primer Encuentro Nacional de Jóvenes Barristas de la Barra Mexicana (diciembre 2023).</li>
+            </ul>
+          </article>
+
+          <article class="cred">
+            <h3 class="cred__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Idiomas
+            </h3>
+            <ul class="cred__list">
+              <li><strong>Español</strong> — lengua materna.</li>
+              <li><strong>Inglés</strong> — certificados TOEFL y Proficiency (The Anglo).</li>
+            </ul>
+          </article>
+
         </div>
       </div>
     </section>
