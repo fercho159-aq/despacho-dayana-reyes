@@ -771,13 +771,35 @@ body.no-scroll { overflow: hidden; }
    12. PÁGINA INTERNA — ENCABEZADO
    ----------------------------------------------------------------- */
 .page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   margin-top: var(--header-h);
-  background:
-    radial-gradient(100% 120% at 90% 0%, rgba(30,58,95,0.5), transparent 55%),
-    linear-gradient(160deg, var(--c-marino), var(--c-marino-dark));
+  background: linear-gradient(160deg, var(--c-marino), var(--c-marino-dark));
   color: #fff;
-  padding-block: clamp(2.75rem, 7vw, 4.5rem);
+  padding-block: clamp(3.25rem, 8vw, 5.5rem);
 }
+/* Fotografía de fondo (se define por página con --hero-img) */
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--hero-img, none);
+  background-size: cover;
+  background-position: center;
+}
+/* Capa azul de la marca con opacidad sobre la foto */
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(130% 140% at 92% 0%, rgba(30,58,95,0.35), transparent 55%),
+    linear-gradient(100deg, rgba(11,20,36,0.94) 0%, rgba(18,32,54,0.86) 42%, rgba(30,58,95,0.62) 100%);
+}
+.page-hero > .container { position: relative; z-index: 1; }
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -1525,35 +1547,3 @@ body.no-scroll { overflow: hidden; }
   margin-top: 0.25rem;
   line-height: 1.4;
 }
-
-
-/* =================================================================
-   ILUSTRACIONES CORPORATIVAS
-   ================================================================= */
-.page-figure {
-  max-width: 500px;
-  margin: 0 auto 2.75rem;
-}
-.page-figure img { width: 100%; height: auto; display: block; }
-.page-figure--sm { max-width: 400px; }
-
-/* Ilustración junto al encabezado de un área (2 columnas en escritorio) */
-.area-head {
-  display: grid;
-  gap: 1.75rem;
-  align-items: center;
-  grid-template-columns: 1fr;
-  margin-bottom: 2.25rem;
-}
-.area-head__illus { max-width: 380px; margin: 0 auto; }
-.area-head__illus img { width: 100%; height: auto; display: block; }
-.area-head .section-head { margin-bottom: 0; }
-
-@media (min-width: 860px) {
-  .area-head { grid-template-columns: 1fr 360px; }
-  .area-head--rev .area-head__illus { order: -1; }
-}
-
-/* Ilustración dentro del hero de inicio */
-.hero__illus { margin-top: 1.75rem; }
-.hero__illus img { width: 100%; height: auto; display: block; }
