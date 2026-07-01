@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-label="Contacto con el despacho">
+  <defs>
+    <linearGradient id="c-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EBD9A7"/>
+      <stop offset="1" stop-color="#D9BE7E"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="280" cy="200" r="168" fill="url(#c-gold)" opacity="0.16"/>
+
+  <!-- Burbuja de conversación -->
+  <g>
+    <path d="M120 110 h230 q30 0 30 30 v120 q0 30 -30 30 h-150 l-52 44 v-44 h-28 q-30 0 -30 -30 v-120 q0 -30 30 -30 Z" fill="#1E3A5F"/>
+    <g fill="#C4BEBD">
+      <rect x="150" y="150" width="170" height="12" rx="6"/>
+      <rect x="150" y="176" width="170" height="12" rx="6"/>
+      <rect x="150" y="202" width="120" height="12" rx="6"/>
+    </g>
+  </g>
+
+  <!-- Pin de ubicación -->
+  <g transform="translate(400,250)">
+    <path d="M0 -70 a58 58 0 0 1 58 58 c0 44 -58 96 -58 96 c0 0 -58 -52 -58 -96 a58 58 0 0 1 58 -58 Z" fill="#2C4A70"/>
+    <path d="M0 -70 a58 58 0 0 1 58 58 c0 44 -58 96 -58 96 c0 0 -58 -52 -58 -96 a58 58 0 0 1 58 -58 Z" fill="none" stroke="#E4CE9A" stroke-width="4"/>
+    <circle cx="0" cy="-10" r="24" fill="#F4F1EC"/>
+  </g>
+
+  <rect x="20" y="392" width="520" height="6" rx="3" fill="#14283F"/>
+</svg>

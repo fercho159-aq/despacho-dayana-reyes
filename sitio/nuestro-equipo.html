@@ -23,6 +23,13 @@
     .cred__list li { position: relative; padding-left: 1.1rem; color: var(--c-gris-texto); font-size: 0.92rem; line-height: 1.55; }
     .cred__list li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--c-oro); }
     .cred__list strong { color: var(--c-marino); }
+
+    /* Botón llamativo del perfil */
+    .profile-cta { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.1rem; padding: 0.7rem 1.3rem; border-radius: 999px; background: linear-gradient(135deg, var(--c-guinda), var(--c-guinda-soft)); color: #fff; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.86rem; text-decoration: none; box-shadow: 0 6px 18px rgba(30,58,95,0.28); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .profile-cta svg { width: 17px; height: 17px; flex-shrink: 0; }
+    .profile-cta__arrow { transition: transform 0.25s ease; }
+    .profile-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(30,58,95,0.38); }
+    .profile-cta:hover .profile-cta__arrow { transform: translateX(4px); }
   </style>
 </head>
 <body data-page="equipo">
@@ -42,6 +49,9 @@
     <!-- ===================== SOCIOS ===================== -->
     <section class="section section--cream" id="socios">
       <div class="container">
+        <figure class="page-figure">
+          <img src="../assets/img/ilustracion-equipo.svg" alt="Ilustración de un equipo de abogados" loading="lazy" width="500" height="360">
+        </figure>
         <div class="section-head">
           <p class="eyebrow">El equipo</p>
           <h2 class="section-title">Socios</h2>
@@ -54,7 +64,12 @@
               <h3 class="member__name">Mtra. Dayana Talissa Reyes López</h3>
               <p class="member__role">Socia fundadora</p>
               <p class="member__spec">Derecho Laboral Empresarial</p>
-              <p class="member__bio">Socia fundadora de la Firma y encargada de dirigir la práctica de Derecho Laboral Empresarial. Licenciada y maestra en Derecho Laboral por la Universidad Panamericana, es además profesora universitaria de la materia y Secretaria de la Comisión de Derecho del Trabajo y Seguridad Social de la Barra Mexicana, Colegio de Abogados. Cuenta con amplia trayectoria en consultoría preventiva, cumplimiento normativo y defensa del sector patronal en México. <a href="#perfil-dayana">Ver perfil profesional completo →</a></p>
+              <p class="member__bio">Socia fundadora de la Firma y encargada de dirigir la práctica de Derecho Laboral Empresarial. Licenciada y maestra en Derecho Laboral por la Universidad Panamericana, es además profesora universitaria de la materia y Secretaria de la Comisión de Derecho del Trabajo y Seguridad Social de la Barra Mexicana, Colegio de Abogados. Cuenta con amplia trayectoria en consultoría preventiva, cumplimiento normativo y defensa del sector patronal en México.</p>
+              <a class="profile-cta" href="#perfil-dayana">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>Ver perfil profesional completo</span>
+                <svg class="profile-cta__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
               <div class="member__links">
                 <a href="mailto:dreyes@dayanareyesabogados.com" aria-label="Correo de Dayana Reyes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
                 <a href="#" aria-label="LinkedIn de Dayana Reyes (Pendiente)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V9.99H6V17h2.34zM7.17 8.93a1.36 1.36 0 1 0 0-2.72 1.36 1.36 0 0 0 0 2.72zM18 17v-3.84c0-2.05-1.1-3-2.56-3-1.18 0-1.71.65-2 1.11V9.99H11.1V17h2.34v-3.78c0-.99.42-1.42 1.1-1.42.66 0 1.12.46 1.12 1.45V17H18z"/></svg></a>

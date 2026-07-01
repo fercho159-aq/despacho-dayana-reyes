@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" role="img" aria-label="Equipo de abogados">
+  <defs>
+    <linearGradient id="e-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EBD9A7"/>
+      <stop offset="1" stop-color="#D9BE7E"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="320" cy="230" r="180" fill="url(#e-gold)" opacity="0.18"/>
+
+  <!-- Figura izquierda -->
+  <g transform="translate(150,150)">
+    <rect x="-58" y="150" width="116" height="130" rx="34" fill="#2C4A70"/>
+    <path d="M-58 214 v-8 a58 58 0 0 1 116 0 v8 Z" fill="#1E3A5F"/>
+    <circle cx="0" cy="112" r="42" fill="#C4BEBD"/>
+    <path d="M-42 112 a42 42 0 0 1 84 0 v-6 a42 42 0 0 0 -84 0 Z" fill="#A6A09F"/>
+    <path d="M-14 150 L0 178 L14 150 Z" fill="#F4F1EC"/>
+    <rect x="-4" y="150" width="8" height="60" fill="#E4CE9A"/>
+  </g>
+
+  <!-- Figura central (destacada) -->
+  <g transform="translate(320,120)">
+    <rect x="-66" y="160" width="132" height="150" rx="38" fill="#1E3A5F"/>
+    <path d="M-66 230 v-8 a66 66 0 0 1 132 0 v8 Z" fill="#14283F"/>
+    <circle cx="0" cy="118" r="48" fill="#D8D2CB"/>
+    <path d="M-48 118 a48 48 0 0 1 96 0 v-6 a48 48 0 0 0 -96 0 Z" fill="#B7B0AE"/>
+    <path d="M-16 160 L0 194 L16 160 Z" fill="#F4F1EC"/>
+    <rect x="-5" y="160" width="10" height="66" fill="#E4CE9A"/>
+  </g>
+
+  <!-- Figura derecha -->
+  <g transform="translate(490,150)">
+    <rect x="-58" y="150" width="116" height="130" rx="34" fill="#2C4A70"/>
+    <path d="M-58 214 v-8 a58 58 0 0 1 116 0 v8 Z" fill="#1E3A5F"/>
+    <circle cx="0" cy="112" r="42" fill="#C4BEBD"/>
+    <path d="M-42 112 a42 42 0 0 1 84 0 v-6 a42 42 0 0 0 -84 0 Z" fill="#A6A09F"/>
+    <path d="M-14 150 L0 178 L14 150 Z" fill="#F4F1EC"/>
+    <rect x="-4" y="150" width="8" height="60" fill="#E4CE9A"/>
+  </g>
+
+  <rect x="0" y="430" width="640" height="6" fill="#14283F"/>
+</svg>

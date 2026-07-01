@@ -1526,3 +1526,34 @@ body.no-scroll { overflow: hidden; }
   line-height: 1.4;
 }
 
+
+/* =================================================================
+   ILUSTRACIONES CORPORATIVAS
+   ================================================================= */
+.page-figure {
+  max-width: 500px;
+  margin: 0 auto 2.75rem;
+}
+.page-figure img { width: 100%; height: auto; display: block; }
+.page-figure--sm { max-width: 400px; }
+
+/* Ilustración junto al encabezado de un área (2 columnas en escritorio) */
+.area-head {
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
+  grid-template-columns: 1fr;
+  margin-bottom: 2.25rem;
+}
+.area-head__illus { max-width: 380px; margin: 0 auto; }
+.area-head__illus img { width: 100%; height: auto; display: block; }
+.area-head .section-head { margin-bottom: 0; }
+
+@media (min-width: 860px) {
+  .area-head { grid-template-columns: 1fr 360px; }
+  .area-head--rev .area-head__illus { order: -1; }
+}
+
+/* Ilustración dentro del hero de inicio */
+.hero__illus { margin-top: 1.75rem; }
+.hero__illus img { width: 100%; height: auto; display: block; }
