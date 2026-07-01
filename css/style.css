@@ -419,6 +419,8 @@ body.no-scroll { overflow: hidden; }
   position: relative;
   margin-top: var(--header-h);
   background:
+    linear-gradient(100deg, rgba(11,20,36,0.93) 0%, rgba(18,32,54,0.85) 42%, rgba(30,58,95,0.60) 100%),
+    var(--hero-img, none) center/cover no-repeat,
     radial-gradient(110% 120% at 85% 0%, rgba(30,58,95,0.55) 0%, transparent 55%),
     linear-gradient(160deg, var(--c-marino) 0%, var(--c-marino-dark) 55%, var(--c-guinda-dark) 130%);
   color: #fff;
