@@ -66,15 +66,11 @@
       gap: 0.7rem;
       margin-bottom: 2.5rem;
     }
-    .brand__mark {
-      width: 48px; height: 48px;
-      display: grid; place-items: center;
-      background: var(--c-azul);
-      color: var(--c-oro-claro);
-      border-radius: 9px;
-      border: 1px solid rgba(198,163,92,0.4);
+    .brand__logo {
+      width: 62px; height: 62px;
+      object-fit: contain;
+      flex-shrink: 0;
     }
-    .brand__mark svg { width: 26px; height: 26px; }
     .brand__text { display: flex; flex-direction: column; line-height: 1.05; text-align: left; }
     .brand__name {
       font-family: var(--font-titulo);
@@ -183,9 +179,8 @@
 <body>
   <main class="wrap">
     <div class="brand">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M3 7h18M7 7l-3 7a3 3 0 0 0 6 0L7 7zM17 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></svg>
-      </span>
+      <img class="brand__logo" src="assets/logo34.png" alt="Dayana Reyes y Abogados">
+
       <span class="brand__text">
         <span class="brand__name">Dayana Reyes</span>
         <span class="brand__tag">y Abogados</span>
