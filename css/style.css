@@ -61,7 +61,7 @@
   --t-base: 0.32s var(--ease);
 
   /* Header */
-  --header-h: 70px;
+  --header-h: 86px;
 }
 
 /* -----------------------------------------------------------------
@@ -273,16 +273,16 @@ body.no-scroll { overflow: hidden; }
   inset: 0 0 auto 0;
   height: var(--header-h);
   z-index: 1000;
-  background: rgba(250, 247, 242, 0.85);
+  background: rgba(18, 32, 54, 0.88);
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: box-shadow var(--t-base), border-color var(--t-base), background var(--t-base);
 }
 .site-header.is-scrolled {
-  box-shadow: var(--shadow-sm);
-  border-bottom-color: var(--c-gris-borde);
-  background: rgba(250, 247, 242, 0.95);
+  box-shadow: 0 6px 22px rgba(11, 20, 36, 0.35);
+  border-bottom-color: rgba(255, 255, 255, 0.14);
+  background: rgba(18, 32, 54, 0.97);
 }
 
 .site-header__inner {
@@ -296,10 +296,11 @@ body.no-scroll { overflow: hidden; }
 /* Logo */
 .logo { display: flex; align-items: center; gap: 0.7rem; }
 .logo__img {
-  height: 77px; /* Aumentado 75% (antes 44px) */
+  height: 74px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 /* Navegación principal */
@@ -313,13 +314,13 @@ body.no-scroll { overflow: hidden; }
   font-size: 0.98rem;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: var(--c-marino);
+  color: rgba(255, 255, 255, 0.92);
   border-radius: var(--radius-pill);
   position: relative;
   transition: color var(--t-fast), background var(--t-fast);
 }
-.nav__link:hover { color: var(--c-guinda); }
-.nav__link[aria-current="page"] { color: var(--c-guinda); }
+.nav__link:hover { color: var(--c-oro-claro); }
+.nav__link[aria-current="page"] { color: var(--c-oro-claro); }
 .nav__link[aria-current="page"]::after {
   content: "";
   position: absolute;
@@ -330,6 +331,16 @@ body.no-scroll { overflow: hidden; }
 }
 
 .nav__cta { margin-left: 0.5rem; }
+/* CTA invertido sobre el header azul */
+.site-header .nav__cta .btn--gold {
+  background: #fff;
+  color: var(--c-marino);
+  box-shadow: 0 6px 18px rgba(11, 20, 36, 0.3);
+}
+.site-header .nav__cta .btn--gold:hover {
+  background: var(--c-oro-claro);
+  color: var(--c-marino-dark);
+}
 
 /* Botón hamburguesa (sólo móvil) */
 .nav-toggle {
@@ -339,14 +350,14 @@ body.no-scroll { overflow: hidden; }
   gap: 5px;
   width: 46px; height: 46px;
   border-radius: 10px;
-  border: 1px solid var(--c-gris-borde);
-  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
 }
 .nav-toggle__bar {
   display: block;
   width: 22px; height: 2px;
   margin-inline: auto;
-  background: var(--c-marino);
+  background: #fff;
   border-radius: 2px;
   transition: transform var(--t-base), opacity var(--t-fast);
 }
@@ -407,7 +418,8 @@ body.no-scroll { overflow: hidden; }
 
 /* DESKTOP: navegación horizontal, sin hamburguesa */
 @media (min-width: 900px) {
-  :root { --header-h: 84px; }
+  :root { --header-h: 110px; }
+  .logo__img { height: 96px; }
   .nav-toggle { display: none; }
   .nav-backdrop { display: none; }
 }
@@ -1380,6 +1392,7 @@ body.no-scroll { overflow: hidden; }
 .value__icon svg { width: 22px; height: 22px; }
 .value h4 { font-size: 1.05rem; margin-bottom: 0.3rem; }
 .value p { font-size: 0.9rem; color: var(--c-gris-suave); }
+.values__closing { max-width: 72ch; margin: 2.25rem auto 0; text-align: center; color: var(--c-gris-texto); font-size: 0.98rem; line-height: 1.7; }
 
 /* Equipo */
 .team { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
