@@ -3,210 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Sitio web en construcción | Dayana Reyes y Abogados</title>
-  <meta name="description" content="Estamos construyendo nuestro nuevo sitio web. Muy pronto en línea. Despacho de abogados laborales para empresas en CDMX.">
-  <meta name="robots" content="noindex, follow">
+  <title>Inicio | Dayana Reyes y Abogados</title>
+  <meta name="description" content="Despacho de abogados laborales para empresas en CDMX. Defensa patronal, consultoría preventiva y compliance laboral.">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#122036">
-
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E3A5F'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23E4CE9A'%3EDR%3C/text%3E%3C/svg%3E">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --c-marino: #122036;
-      --c-marino-dark: #0B1424;
-      --c-azul: #1E3A5F;
-      --c-oro: #C6A35C;
-      --c-oro-claro: #E4CE9A;
-      --font-titulo: 'Oswald', 'Arial Narrow', Impact, sans-serif;
-      --font-cuerpo: 'Poppins', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: grid;
-      place-items: center;
-      padding: 2rem 1.25rem;
-      font-family: var(--font-cuerpo);
-      color: rgba(255,255,255,0.85);
-      text-align: center;
-      background:
-        radial-gradient(120% 120% at 85% 0%, rgba(30,58,95,0.65) 0%, transparent 55%),
-        linear-gradient(160deg, var(--c-marino) 0%, var(--c-marino-dark) 60%, var(--c-azul) 140%);
-      position: relative;
-      overflow: hidden;
-    }
-    /* Textura decorativa de puntos */
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(rgba(198,163,92,0.10) 1px, transparent 1px);
-      background-size: 26px 26px;
-      opacity: 0.6;
-      pointer-events: none;
-    }
-
-    .wrap {
-      position: relative;
-      max-width: 620px;
-      width: 100%;
-    }
-
-    /* Logo / marca */
-    .brand {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.7rem;
-      margin-bottom: 2rem;
-    }
-    .brand__logo {
-      width: 130px; height: 130px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-    .brand__text { display: flex; flex-direction: column; line-height: 1.05; text-align: left; }
-    .brand__name {
-      font-family: var(--font-titulo);
-      font-size: 1.25rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: #fff;
-    }
-    .brand__tag {
-      font-size: 0.66rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--c-oro-claro);
-      font-weight: 600;
-    }
-
-    /* Insignia "en construcción" */
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.5rem 1.1rem;
-      border: 1px solid rgba(198,163,92,0.45);
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--c-oro-claro);
-      margin-bottom: 1.75rem;
-    }
-    .badge svg { width: 16px; height: 16px; }
-
-    /* Título principal */
-    h1 {
-      font-family: var(--font-titulo);
-      font-weight: 600;
-      line-height: 1.1;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      font-size: clamp(2.1rem, 8vw, 4rem);
-      color: #fff;
-    }
-    h1 span { display: block; color: var(--c-oro-claro); }
-
-    .rule {
-      width: 70px; height: 3px; border: 0;
-      margin: 1.5rem auto;
-      background: linear-gradient(90deg, var(--c-oro), var(--c-oro-claro));
-      border-radius: 2px;
-    }
-
-    .lead {
-      font-size: clamp(1rem, 2.4vw, 1.15rem);
-      line-height: 1.7;
-      color: rgba(255,255,255,0.78);
-      max-width: 46ch;
-      margin: 0 auto;
-    }
-    .spec {
-      margin-top: 1.5rem;
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      font-weight: 500;
-    }
-
-    /* Contacto discreto */
-    .contact {
-      margin-top: 2.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem;
-    }
-    .contact a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.3rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-    }
-    .contact a svg { width: 17px; height: 17px; }
-    .contact a:hover { transform: translateY(-2px); }
-    .contact .wa {
-      background: #25D366; color: #fff;
-      box-shadow: 0 8px 20px rgba(37,211,102,0.35);
-    }
-    .contact .ghost {
-      background: transparent;
-      color: rgba(255,255,255,0.85);
-      border: 1px solid rgba(255,255,255,0.3);
-    }
-    .contact .ghost:hover { border-color: var(--c-oro-claro); color: var(--c-oro-claro); }
-
-    @media (prefers-reduced-motion: reduce) {
-      .contact a:hover { transform: none; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <main class="wrap">
-    <div class="brand">
-      <img class="brand__logo" src="assets/logo34.png" alt="Dayana Reyes y Abogados">
-    </div>
+<body data-page="inicio">
+  <main id="main">
 
-    <p class="badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 3 3l6-6a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6z"/></svg>
-      En construcción
-    </p>
+    <section class="hero" aria-labelledby="hero-title" style="--hero-img:url('../assets/img/hero/hero-handshake.jpg')">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Especialistas en Derecho Laboral Empresarial</p>
+          <h1 class="hero__title" id="hero-title">Dayana Reyes y Abogados, S.C.</h1>
+          <p class="hero__lead">Despacho especializado en defensa patronal, consultoría preventiva y cumplimiento laboral. Acompañamos a su empresa con rigor, estrategia y confidencialidad absoluta.</p>
+          <div class="hero__actions">
+            <a class="btn btn--gold btn--lg" href="contacto.html">Agendar Consulta Legal</a>
+            <a class="btn btn--ghost-light btn--lg" href="la-firma.html">Conozca la firma</a>
+          </div>
+        </div>
+        <aside class="hero__card" aria-label="Cifras del despacho">
+          <h2>Una firma construida sobre resultados</h2>
+          <div class="hero__stats">
+            <div class="hero__stat"><span class="num">+10</span><span class="label">Años de trayectoria</span></div>
+            <div class="hero__stat"><span class="num">+2500</span><span class="label">Asuntos atendidos</span></div>
+            <div class="hero__stat"><span class="num">+500</span><span class="label">Empresas asesoradas</span></div>
+            <div class="hero__stat"><span class="num">24 hrs</span><span class="label">Respuesta ante urgencias</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-    <h1>Sitio web <span>en construcción</span></h1>
-    <hr class="rule">
-    <p class="lead">Estamos preparando una nueva experiencia digital a la altura de nuestro despacho. Muy pronto estaremos en línea.</p>
-    <p class="spec">Especialistas en Derecho Laboral Empresarial · Ciudad de México</p>
+    <section class="section section--cream">
+      <div class="container">
 
-    <div class="contact">
-      <a class="wa" href="https://wa.me/525640063748?text=Hola%2C%20deseo%20agendar%20una%20consulta%20legal%20laboral." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        WhatsApp
-      </a>
-      <a class="ghost" href="tel:+525640063748">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Llamar
-      </a>
-      <a class="ghost" href="mailto:contacto@dayanareyesabogados.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
-        Correo
-      </a>
-    </div>
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Explore el sitio</p>
+          <h2 class="section-title">Todo lo que necesita saber de nosotros</h2>
+          <hr class="gold-rule">
+        </div>
+        <div class="cards cards--4">
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6"/></svg></span>
+            <h3 class="card__title">La Firma</h3>
+            <p class="card__text">Quiénes somos, nuestra visión, misión y los valores que guían cada asunto.</p>
+            <a class="card__link" href="la-firma.html">Conocer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3 class="card__title">Nuestro Equipo</h3>
+            <p class="card__text">Conozca a los profesionales que defienden los intereses de su empresa.</p>
+            <a class="card__link" href="nuestro-equipo.html">Conocer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M3 7h18M7 7l-3 7a3 3 0 0 0 6 0L7 7zM17 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></svg></span>
+            <h3 class="card__title">Práctica Legal</h3>
+            <p class="card__text">Áreas de especialización: defensa patronal, litigio, compliance y consultoría.</p>
+            <a class="card__link" href="practica-legal.html">Conocer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 9h16M9 4v16"/></svg></span>
+            <h3 class="card__title">Actualidad Legal</h3>
+            <p class="card__text">Análisis y novedades en materia laboral para directivos y empresarios.</p>
+            <a class="card__link" href="actualidad-legal.html">Conocer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container cta-band__inner">
+        <div>
+          <h2 class="cta-band__title">Su empresa merece una defensa a la altura</h2>
+          <p class="cta-band__text">Hablemos hoy mismo. La prevención de hoy evita la contingencia de mañana.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--gold btn--lg" href="contacto.html">Agendar Consulta Legal</a>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <script src="layout.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -3,92 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Contacto | Agende su Consulta Legal Laboral en CDMX | Dayana Reyes y Abogados</title>
-  <meta name="description" content="Contacte a nuestro despacho de abogados laborales en Ciudad de México. Agende su consulta legal: defensa patronal, consultoría y compliance. Atención por teléfono y WhatsApp.">
-  <meta name="keywords" content="despacho de abogados laborales en Ciudad de México, contacto abogados laborales CDMX, agendar consulta legal laboral, abogados laborales para empresas en CDMX">
+  <title>Contacto | Dayana Reyes y Abogados</title>
+  <meta name="description" content="Contáctenos: ubicación, dirección, teléfono, correo y horario. Agende su consulta legal en la Ciudad de México.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.dayanareyesabogados.com/contacto.html">
   <meta name="theme-color" content="#122036">
-
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_MX">
-  <meta property="og:title" content="Contacto | Dayana Reyes y Abogados">
-  <meta property="og:description" content="Agende su consulta legal con nuestro despacho de abogados laborales en la Ciudad de México.">
-  <meta property="og:url" content="https://www.dayanareyesabogados.com/contacto.html">
-
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E3A5F'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23E4CE9A'%3EDR%3C/text%3E%3C/svg%3E">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Saltar al contenido principal</a>
-
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="logo" href="index.html" aria-label="Dayana Reyes y Abogados — Inicio">
-        <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M3 7h18M7 7l-3 7a3 3 0 0 0 6 0L7 7zM17 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></svg></span>
-        <span class="logo__text"><span class="logo__name">Dayana Reyes</span><span class="logo__tag">y Abogados</span></span>
-      </a>
-
-      <button class="nav-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle__bar" aria-hidden="true"></span>
-        <span class="nav-toggle__bar" aria-hidden="true"></span>
-        <span class="nav-toggle__bar" aria-hidden="true"></span>
-      </button>
-
-      <nav class="nav" id="site-nav" aria-label="Navegación principal">
-        <ul class="nav__list">
-          <li><a class="nav__link" href="index.html">Inicio</a></li>
-          <li><a class="nav__link" href="servicios/defensa-patronal.html">Defensa Patronal</a></li>
-          <li><a class="nav__link" href="servicios/auditoria-compliance.html">Compliance Laboral</a></li>
-          <li><a class="nav__link" href="index.html#faq">Preguntas Frecuentes</a></li>
-          <li><a class="nav__link" href="contacto.html" aria-current="page">Contacto</a></li>
-        </ul>
-        <div class="nav__cta"><a class="btn btn--gold" href="#form-contacto">Agendar Consulta Legal</a></div>
-      </nav>
-    </div>
-  </header>
-  <div class="nav-backdrop" aria-hidden="true"></div>
-
+<body data-page="contacto">
   <main id="main">
-    <section class="page-hero">
+
+    <section class="page-hero" style="--hero-img:url('../assets/img/hero/hero-contacto.jpg')">
       <div class="container">
         <nav class="breadcrumb" aria-label="Ruta de navegación">
           <a href="index.html">Inicio</a> <span aria-hidden="true">/</span>
           <span aria-current="page">Contacto</span>
         </nav>
-        <h1 class="page-hero__title">Agende su consulta legal</h1>
-        <p class="page-hero__lead">
-          Atendemos a empresas de toda la Ciudad de México y la zona metropolitana. Cuéntenos su caso con total
-          confidencialidad y un especialista le responderá a la brevedad.
-        </p>
+        <h1 class="page-hero__title">Contacto</h1>
+        <p class="page-hero__lead">Estamos a sus órdenes. Escríbanos, llámenos o visítenos: con gusto atenderemos su consulta con absoluta confidencialidad.</p>
       </div>
     </section>
 
     <section class="section section--cream">
       <div class="container contact-layout">
 
-        <!-- ===================== FORMULARIO ===================== -->
+        <!-- Formulario -->
         <div id="form-contacto">
+          <div class="section-head">
+            <p class="eyebrow">Escríbanos</p>
+            <h2 class="section-title" style="font-size:var(--fs-h3);">Déjenos sus datos</h2>
+            <hr class="gold-rule">
+          </div>
           <form class="form" id="contact-form" novalidate>
             <div class="form__body">
-              <div class="form__grid form__grid--2">
+              <div class="form__grid">
                 <div class="field">
                   <label for="nombre">Nombre completo <span class="req" aria-hidden="true">*</span></label>
                   <input type="text" id="nombre" name="nombre" autocomplete="name" required>
                   <span class="field__error" aria-live="polite"></span>
                 </div>
-                <div class="field">
-                  <label for="empresa">Empresa</label>
-                  <input type="text" id="empresa" name="empresa" autocomplete="organization">
-                  <span class="field__error" aria-live="polite"></span>
-                </div>
               </div>
-
               <div class="form__grid form__grid--2">
                 <div class="field">
                   <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
@@ -96,192 +53,94 @@
                   <span class="field__error" aria-live="polite"></span>
                 </div>
                 <div class="field">
-                  <label for="telefono">Teléfono <span class="req" aria-hidden="true">*</span></label>
-                  <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" autocomplete="tel">
                   <span class="field__error" aria-live="polite"></span>
                 </div>
               </div>
-
               <div class="form__grid">
                 <div class="field">
-                  <label for="asunto">Tipo de asunto <span class="req" aria-hidden="true">*</span></label>
-                  <select id="asunto" name="asunto" required>
-                    <option value="">Seleccione una opción…</option>
-                    <option value="demanda">Demanda laboral en curso (urgente)</option>
-                    <option value="defensa">Defensa patronal y litigio</option>
-                    <option value="compliance">Auditoría y compliance laboral</option>
-                    <option value="consultoria">Consultoría preventiva</option>
-                    <option value="contratos">Contratos y documentación</option>
-                    <option value="otro">Otro asunto</option>
-                  </select>
+                  <label for="mensaje">Comentario o mensaje <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntenos brevemente en qué podemos ayudarle. Su información es tratada con absoluta confidencialidad."></textarea>
                   <span class="field__error" aria-live="polite"></span>
                 </div>
               </div>
-
-              <div class="form__grid">
-                <div class="field">
-                  <label for="mensaje">Describa brevemente su caso <span class="req" aria-hidden="true">*</span></label>
-                  <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntenos la situación de su empresa. Toda la información es tratada con absoluta confidencialidad."></textarea>
-                  <span class="field__error" aria-live="polite"></span>
-                </div>
-              </div>
-
               <label class="consent">
                 <input type="checkbox" id="consent" name="consent" required>
-                <span>He leído y acepto el <a href="aviso-de-privacidad.html" target="_blank" rel="noopener">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos personales conforme a la ley.</span>
+                <span>He leído y acepto el <a href="aviso-de-privacidad.html" target="_blank" rel="noopener">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos personales.</span>
               </label>
-
               <div style="margin-top:1.5rem;">
                 <button type="submit" class="btn btn--primary btn--lg btn--block">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-                  Enviar y agendar consulta
+                  Enviar mensaje
                 </button>
                 <p class="form__note">Respuesta en menos de 24 horas hábiles · Sin compromiso · Confidencial</p>
               </div>
             </div>
-
-            <!-- Mensaje de éxito (mostrado por JS) -->
             <div class="form__success" id="form-success" role="status">
               <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-              <h3>Hemos recibido su solicitud</h3>
-              <p>Gracias por contactar a Dayana Reyes y Abogados. Un especialista revisará su caso y le contactará a la brevedad. Para asuntos urgentes, escríbanos por WhatsApp.</p>
+              <h3>Hemos recibido su mensaje</h3>
+              <p>Gracias por contactar a Dayana Reyes y Abogados. Le responderemos a la brevedad.</p>
               <a class="btn btn--gold" href="https://wa.me/525640063748" target="_blank" rel="noopener" style="margin-top:1rem;">Escribir por WhatsApp</a>
             </div>
           </form>
         </div>
 
-        <!-- ===================== DATOS DE CONTACTO ===================== -->
+        <!-- Datos de contacto -->
         <div>
           <div class="section-head">
-            <p class="eyebrow">Contacto directo</p>
-            <h2 class="section-title" style="font-size:var(--fs-h3);">Hablemos hoy mismo</h2>
+            <p class="eyebrow">Dónde encontrarnos</p>
+            <h2 class="section-title" style="font-size:var(--fs-h3);">Datos de contacto</h2>
             <hr class="gold-rule">
           </div>
-
           <div class="contact-info">
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <span><span class="contact-info__label">Dirección</span><span class="contact-info__value">Las Huertas 104, despacho 8, colonia Actipan del Valle, alcaldía Benito Juárez, C.P. 03230, CDMX</span></span>
+            </div>
             <a class="contact-info__item" href="tel:+525640063748">
               <span class="contact-info__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
               <span><span class="contact-info__label">Teléfono</span><span class="contact-info__value">+52 56 4006 3748</span></span>
             </a>
-
             <a class="contact-info__item" href="https://wa.me/525640063748" target="_blank" rel="noopener">
               <span class="contact-info__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></span>
-              <span><span class="contact-info__label">WhatsApp corporativo</span><span class="contact-info__value">+52 56 4006 3748 <span>Atención inmediata</span></span></span>
+              <span><span class="contact-info__label">WhatsApp</span><span class="contact-info__value">+52 56 4006 3748 <span>Atención inmediata</span></span></span>
             </a>
-
             <a class="contact-info__item" href="mailto:contacto@dayanareyesabogados.com">
               <span class="contact-info__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
               <span><span class="contact-info__label">Correo electrónico</span><span class="contact-info__value">contacto@dayanareyesabogados.com</span></span>
             </a>
-
-            <div class="contact-info__item">
-              <span class="contact-info__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <span><span class="contact-info__label">Oficinas en CDMX</span><span class="contact-info__value">Av. Paseo de la Reforma 250, Piso 10 <span>Col. Juárez, Cuauhtémoc, 06600, Ciudad de México</span></span></span>
-            </div>
-
             <div class="contact-info__item">
               <span class="contact-info__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
-              <span><span class="contact-info__label">Horario de atención</span><span class="contact-info__value">Lunes a viernes <span>8:00 a.m. a 18:00 horas (atención urgente 24/7)</span></span></span>
+              <span><span class="contact-info__label">Horario de trabajo</span><span class="contact-info__value">Lunes a viernes, 8:00 a.m. a 18:00 horas <span>Atención urgente 24/7</span></span></span>
             </div>
-          </div>
-
-          <div class="contact-actions">
-            <a class="btn btn--primary" href="tel:+525640063748">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Llamar ahora
-            </a>
-            <a class="btn btn--gold" href="https://wa.me/525640063748?text=Hola%2C%20deseo%20agendar%20una%20consulta%20legal%20laboral." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-
-          <!-- Mapa de ubicación (Google Maps embebido) -->
-          <div class="map-embed">
-            <iframe
-              title="Ubicación de Dayana Reyes y Abogados en la Ciudad de México"
-              src="https://www.google.com/maps?q=Las%20Huertas%20104,%20Actipan%20del%20Valle,%20Benito%20Ju%C3%A1rez,%20Ciudad%20de%20M%C3%A9xico&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
       </div>
     </section>
+
+    <!-- ===================== MAPA ===================== -->
+    <section class="section section--white" style="padding-top:0;">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Ubicación</p>
+          <h2 class="section-title" style="font-size:var(--fs-h3);">Dónde nos ubicamos</h2>
+          <hr class="gold-rule">
+        </div>
+        <div class="map-embed">
+          <iframe
+            title="Ubicación de Dayana Reyes y Abogados en la Ciudad de México"
+            src="https://www.google.com/maps?q=Las%20Huertas%20104,%20Actipan%20del%20Valle,%20Benito%20Ju%C3%A1rez,%20Ciudad%20de%20M%C3%A9xico&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer" aria-label="Pie de página">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a class="logo" href="index.html" aria-label="Dayana Reyes y Abogados — Inicio">
-            <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M3 7h18M7 7l-3 7a3 3 0 0 0 6 0L7 7zM17 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></svg></span>
-            <span class="logo__text"><span class="logo__name">Dayana Reyes</span><span class="logo__tag">y Abogados</span></span>
-          </a>
-          <p class="footer__about">Despacho de abogados laborales en la Ciudad de México, especializado en derecho laboral empresarial, defensa patronal y compliance.</p>
-        </div>
-        <nav class="footer__col" aria-label="Servicios">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="servicios/defensa-patronal.html">Defensa Patronal y Litigio</a></li>
-            <li><a href="servicios/auditoria-compliance.html">Auditoría y Compliance</a></li>
-            <li><a href="contacto.html">Consultoría Preventiva</a></li>
-            <li><a href="contacto.html">Contratos y Documentación</a></li>
-          </ul>
-        </nav>
-        <nav class="footer__col" aria-label="Despacho">
-          <h4>Despacho</h4>
-          <ul>
-            <li><a href="index.html#casos">Casos de Éxito</a></li>
-            <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="aviso-de-privacidad.html">Aviso de Privacidad</a></li>
-          </ul>
-        </nav>
-        <div class="footer__col">
-          <h4>Contacto en CDMX</h4>
-          <p class="footer__contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Av. Paseo de la Reforma 250, Piso 10, Col. Juárez, CDMX</p>
-          <p class="footer__contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+525640063748">+52 56 4006 3748</a></p>
-          <p class="footer__contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> <a href="mailto:contacto@dayanareyesabogados.com">contacto@dayanareyesabogados.com</a></p>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; <span id="current-year">2026</span> Dayana Reyes y Abogados. Todos los derechos reservados.</p>
-        <nav class="footer__legal-links" aria-label="Enlaces legales">
-          <a href="aviso-de-privacidad.html">Aviso de Privacidad</a>
-          <a href="aviso-de-privacidad.html#terminos">Términos y Condiciones</a>
-          <a href="aviso-de-privacidad.html#cookies">Política de Cookies</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-  <div class="wa-widget" id="wa-widget">
-    <div class="wa-bubble" id="wa-bubble" role="dialog" aria-label="Atención inmediata por WhatsApp">
-      <button class="wa-bubble__close" id="wa-bubble-close" type="button" aria-label="Cerrar mensaje">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-      <a class="wa-bubble__link" href="https://wa.me/525640063748?text=Hola%2C%20mi%20empresa%20requiere%20asesor%C3%ADa%20laboral%20urgente." target="_blank" rel="noopener">
-        <span class="wa-bubble__head">
-          <span class="wa-bubble__avatar" aria-hidden="true">DR</span>
-          <span class="wa-bubble__meta">
-            <strong>Lic. Dayana Reyes</strong>
-            <span class="wa-bubble__status"><span class="wa-dot" aria-hidden="true"></span> En línea ahora</span>
-          </span>
-        </span>
-        <span class="wa-bubble__msg">⚠️ ¿Su empresa enfrenta una demanda o inspección? <strong>Los plazos legales corren en su contra</strong> y cada día cuenta. No arriesgue su patrimonio: reciba atención hoy mismo.</span>
-        <span class="wa-bubble__cta">Chatear ahora
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </a>
-    </div>
-
-    <a class="whatsapp-float" id="whatsapp-float" href="https://wa.me/525640063748?text=Hola%2C%20deseo%20agendar%20una%20consulta%20legal%20laboral." target="_blank" rel="noopener" aria-label="Escríbanos por WhatsApp">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-      <span class="wa-badge" aria-hidden="true">1</span>
-    </a>
-  </div>
-
+  <script src="layout.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
