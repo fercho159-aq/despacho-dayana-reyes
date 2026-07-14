@@ -20,5 +20,6 @@ node_modules/
 /*.pdf
 /*.docx
 
-# Fotos fuente sin procesar (las versiones optimizadas viven en assets/img/miembros)
+# Fotos fuente sin procesar (las versiones optimizadas viven en assets/img/...)
 /miembros/
+/actualidad-legal/

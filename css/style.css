@@ -1563,3 +1563,42 @@ body.no-scroll { overflow: hidden; }
   margin-top: 0.25rem;
   line-height: 1.4;
 }
+
+/* =================================================================
+   GRID DE EVENTOS — ACTUALIDAD LEGAL (3 columnas con imagen)
+   ================================================================= */
+.event-lead { max-width: 70ch; margin: 0 auto 2.5rem; text-align: center; color: var(--c-gris-texto); font-size: 1rem; line-height: 1.7; }
+.event-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .event-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 960px) { .event-grid { grid-template-columns: repeat(3, 1fr); } }
+.event-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--c-gris-borde); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+.event-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.event-card__media { display: block; aspect-ratio: 1 / 1; overflow: hidden; background: var(--c-crema-dark); }
+.event-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform .3s ease; }
+.event-card__media:hover img { transform: scale(1.03); }
+.event-card__ph { width: 100%; height: 100%; display: grid; place-items: center; background: linear-gradient(155deg, var(--c-marino), var(--c-guinda)); color: var(--c-oro-claro); }
+.event-card__ph svg { width: 46px; height: 46px; opacity: .85; }
+.event-card__body { padding: 1.05rem 1.15rem 1.25rem; display: flex; flex-direction: column; gap: .4rem; flex-grow: 1; }
+.event-card__host { font-size: .78rem; color: var(--c-gris-suave); font-style: italic; line-height: 1.4; }
+.event-card__title { font-size: 1.02rem; font-weight: 600; color: var(--c-guinda); line-height: 1.35; margin: 0; }
+.event-card__desc { font-size: .9rem; color: var(--c-gris-texto); line-height: 1.55; margin: 0; }
+.event-card__sub { margin: .2rem 0 0; padding-left: 1.05rem; font-size: .85rem; color: var(--c-gris-texto); }
+.event-card__sub li { margin-bottom: .25rem; }
+.event-card__link { margin-top: auto; padding-top: .7rem; font-weight: 600; font-size: .85rem; color: var(--c-guinda); display: inline-flex; align-items: center; gap: .35rem; }
+.event-card__link svg { width: 15px; height: 15px; }
+.event-group-title { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--c-guinda); font-size: 1.2rem; margin: 2.75rem 0 1.25rem; padding-bottom: .5rem; border-bottom: 2px solid var(--c-oro); }
+.event-group-title:first-child { margin-top: 0; }
+
+/* Evento destacado (con galería de flyers) */
+.event-featured { background: #fff; border: 1px solid var(--c-gris-borde); border-radius: 16px; box-shadow: var(--shadow-sm); padding: 1.75rem; margin-bottom: 2.5rem; border-top: 4px solid var(--c-oro); }
+.event-featured__meta { font-size: .74rem; letter-spacing: .07em; text-transform: uppercase; color: var(--c-oro-dark); font-weight: 600; margin: 0 0 .4rem; }
+.event-featured__title { font-size: 1.35rem; color: var(--c-guinda); margin: 0 0 .4rem; }
+.event-featured__host { font-size: .9rem; color: var(--c-gris-suave); font-style: italic; margin: 0 0 .7rem; }
+.event-featured__desc { color: var(--c-gris-texto); font-size: .95rem; line-height: 1.6; margin: 0; max-width: 75ch; }
+.event-flyers { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1.4rem; }
+@media (min-width: 560px) { .event-flyers { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .event-flyers { grid-template-columns: repeat(4, 1fr); } }
+.event-flyers a { display: block; border-radius: 10px; overflow: hidden; border: 1px solid var(--c-gris-borde); box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+.event-flyers a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.event-flyers img { width: 100%; height: auto; display: block; }
+.listing__back { margin-top: 3rem; }
