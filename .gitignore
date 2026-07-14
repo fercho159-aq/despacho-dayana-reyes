@@ -19,3 +19,6 @@ node_modules/
 # Documentos personales (CV, cartas) — no publicar en el repo
 /*.pdf
 /*.docx
+
+# Fotos fuente sin procesar (las versiones optimizadas viven en assets/img/miembros)
+/miembros/

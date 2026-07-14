@@ -14,7 +14,7 @@
 (function () {
   'use strict';
 
-  var WA = 'https://wa.me/525640063748?text=Hola%2C%20deseo%20agendar%20una%20consulta%20legal%20laboral.';
+  var WA = 'https://wa.me/525640063748?text=Hola%2C%20me%20gustar%C3%ADa%20asesor%C3%ADa%20legal%20en%20materia%20laboral.';
   var CHEVRON = '<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
 
   /* ---------- HEADER ---------- */
@@ -43,6 +43,7 @@
     + '            <li><a href="la-firma.html#vision">Nuestra visión</a></li>'
     + '            <li><a href="la-firma.html#mision">Nuestra misión</a></li>'
     + '            <li><a href="la-firma.html#valores">Nuestros valores</a></li>'
+    + '            <li><a href="la-firma.html#enfoque">Nuestro enfoque</a></li>'
     + '          </ul>'
     + '        </li>'
 
@@ -110,6 +111,15 @@
     + '              </ul>'
     + '            </div>'
     + '          </div>'
+    + '        </li>'
+
+    /* Educación Continua — desplegable simple */
+    + '        <li class="nav__item">'
+    + '          <button class="nav__link nav__dropdown-toggle" type="button" data-nav="educacion" aria-haspopup="true" aria-expanded="false">Educación Continua ' + CHEVRON + '</button>'
+    + '          <ul class="nav__submenu">'
+    + '            <li><a href="educacion-continua.html#cursos">Cursos</a></li>'
+    + '            <li><a href="educacion-continua.html#diplomados">Diplomados</a></li>'
+    + '          </ul>'
     + '        </li>'
 
     + '        <li><a class="nav__link" data-nav="contacto" href="contacto.html">Contacto</a></li>'
