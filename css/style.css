@@ -572,6 +572,8 @@ body.no-scroll { overflow: hidden; }
 @media (min-width: 640px) { .cards { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .cards--3 { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1024px) { .cards--4 { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 900px)  { .cards--5 { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1200px) { .cards--5 { grid-template-columns: repeat(5, 1fr); } }
 
 .card {
   position: relative;

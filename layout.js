@@ -164,6 +164,7 @@
     + '        <h4>Más</h4>'
     + '        <ul>'
     + '          <li><a href="actualidad-legal.html">Actualidad Legal</a></li>'
+    + '          <li><a href="educacion-continua.html">Educación Continua</a></li>'
     + '        </ul>'
     + '      </nav>'
     + '      <div class="footer__col">'

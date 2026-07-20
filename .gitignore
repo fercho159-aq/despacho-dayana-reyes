@@ -23,3 +23,4 @@ node_modules/
 # Fotos fuente sin procesar (las versiones optimizadas viven en assets/img/...)
 /miembros/
 /actualidad-legal/
+/assets/imagenes-julio/
