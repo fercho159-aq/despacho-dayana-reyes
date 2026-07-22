@@ -126,7 +126,16 @@
     + '        <li><a class="nav__link" data-nav="contacto" href="contacto.html">Contacto</a></li>'
 
     + '      </ul>'
-    + '      <div class="nav__cta"><a class="btn btn--gold" href="contacto.html">Agendar Consulta Legal</a></div>'
+    + '      <div class="site-search" id="site-search">'
+    + '        <div class="site-search__wrap">'
+    + '          <svg class="site-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>'
+    + '          <input class="site-search__input" id="search-input" type="search" placeholder="Buscar en el sitio…" autocomplete="off" aria-label="Buscar en el sitio">'
+    + '          <button class="site-search__clear" id="search-clear" type="button" aria-label="Limpiar búsqueda" style="display:none">'
+    + '            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>'
+    + '          </button>'
+    + '        </div>'
+    + '        <div class="site-search__results" id="search-results" aria-live="polite"></div>'
+    + '      </div>'
     + '    </nav>'
     + '  </div>'
     + '</header>'
@@ -183,6 +192,13 @@
     + '  </div>'
     + '</footer>';
 
+  /* Botón flotante "Agendar Consulta Legal" (arriba de WhatsApp) */
+  var ctaFloat = ''
+    + '<a class="cta-float" href="contacto.html" aria-label="Agendar Consulta Legal">'
+    + '  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'
+    + '  <span>Agendar Consulta</span>'
+    + '</a>';
+
   /* Widget flotante de WhatsApp (botón con globo de captación) */
   var wa = ''
     + '<div class="wa-widget" id="wa-widget">'
@@ -207,7 +223,7 @@
 
   // Inyección en el DOM (defer garantiza que el <main> ya existe)
   document.body.insertAdjacentHTML('afterbegin', header);
-  document.body.insertAdjacentHTML('beforeend', footer + wa);
+  document.body.insertAdjacentHTML('beforeend', footer + ctaFloat + wa);
 
   // Marcar el enlace activo según data-page del <body>
   var page = document.body.getAttribute('data-page');
@@ -230,4 +246,98 @@
   // Año dinámico (por si la página no carga main.js)
   var y = document.getElementById('current-year');
   if (y) y.textContent = new Date().getFullYear();
+
+  /* ---------- BUSCADOR DINÁMICO ---------- */
+  var searchScript = document.createElement('script');
+  searchScript.src = 'js/search.js';
+  searchScript.defer = true;
+  document.head.appendChild(searchScript);
+
+  var searchInput   = document.getElementById('search-input');
+  var searchResults = document.getElementById('search-results');
+  var searchClear   = document.getElementById('search-clear');
+  var searchWrap    = document.getElementById('site-search');
+
+  if (searchInput && searchResults) {
+    var debounceTimer;
+
+    searchInput.addEventListener('input', function () {
+      clearTimeout(debounceTimer);
+      var q = searchInput.value.trim();
+      searchClear.style.display = q ? 'flex' : 'none';
+
+      if (q.length < 2) {
+        searchResults.innerHTML = '';
+        searchResults.classList.remove('is-visible');
+        return;
+      }
+
+      debounceTimer = setTimeout(function () {
+        if (!window.__siteSearch) return;
+        var results = window.__siteSearch(q);
+
+        if (!results.length) {
+          searchResults.innerHTML = '<div class="search-no-results">No se encontraron resultados</div>';
+          searchResults.classList.add('is-visible');
+          return;
+        }
+
+        var html = '';
+        results.forEach(function (r) {
+          html += '<a class="search-result" href="' + r.url + '">'
+            + '<span class="search-result__title">' + r.title + '</span>'
+            + '<span class="search-result__desc">' + r.desc + '</span>'
+            + '</a>';
+        });
+        searchResults.innerHTML = html;
+        searchResults.classList.add('is-visible');
+      }, 200);
+    });
+
+    searchClear.addEventListener('click', function () {
+      searchInput.value = '';
+      searchClear.style.display = 'none';
+      searchResults.innerHTML = '';
+      searchResults.classList.remove('is-visible');
+      searchInput.focus();
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!searchWrap.contains(e.target)) {
+        searchResults.innerHTML = '';
+        searchResults.classList.remove('is-visible');
+      }
+    });
+
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        searchResults.innerHTML = '';
+        searchResults.classList.remove('is-visible');
+        searchInput.blur();
+      }
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        var first = searchResults.querySelector('.search-result');
+        if (first) first.focus();
+      }
+    });
+
+    searchResults.addEventListener('keydown', function (e) {
+      var focused = document.activeElement;
+      if (!focused || !focused.classList.contains('search-result')) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        var next = focused.nextElementSibling;
+        if (next) next.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        var prev = focused.previousElementSibling;
+        if (prev) prev.focus(); else searchInput.focus();
+      } else if (e.key === 'Escape') {
+        searchResults.innerHTML = '';
+        searchResults.classList.remove('is-visible');
+        searchInput.focus();
+      }
+    });
+  }
 })();
