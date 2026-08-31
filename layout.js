@@ -93,7 +93,7 @@
     + '            <div class="mega-col">'
     + '              <span class="mega-col__title">Contenidos</span>'
     + '              <ul>'
-    + '                <li><a href="actualidad-legal.html#boletin">Boletín laboral</a></li>'
+    + '                <li><a href="boletin-laboral.html">Boletín laboral</a></li>'
     + '                <li><a href="publicaciones.html">Publicaciones</a></li>'
     + '                <li><a href="entrevistas.html">Entrevistas</a></li>'
     + '                <li><a href="conferencias-presenciales.html">Conferencias presenciales</a></li>'
