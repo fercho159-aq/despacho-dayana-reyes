@@ -174,7 +174,7 @@
     /* Bloque de cierre / CTA */
     .repse-cta {
       background: var(--m-teal);
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
       padding: 2rem 1.8rem 1.8rem 1.8rem;
       margin-top: 3rem;
     }
@@ -243,11 +243,40 @@
       text-align: center;
       margin: 0.9rem 0 0 0;
     }
-    .prose.repse .repse-disclaimer {
-      font-size: 0.8rem;
-      color: var(--m-muted);
+    /* Firma de cierre, como el pie del correo */
+    .repse-firma {
+      background: var(--m-teal);
+      border-top: 1px solid rgba(255,255,255,0.10);
+      border-radius: 0 0 10px 10px;
+      padding: 1.8rem 1.8rem 2rem 1.8rem;
       text-align: center;
-      margin-top: 1.6rem;
+      margin-top: 0;
+    }
+    .prose.repse > .repse-firma { margin-top: 0; }
+    .prose.repse .repse-firma__nombre {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      color: #fff;
+      margin: 0 0 0.5rem 0;
+    }
+    .prose.repse .repse-firma__datos {
+      font-size: 0.88rem;
+      line-height: 1.9;
+      color: var(--m-gold);
+      margin: 0;
+    }
+    .repse-firma__datos a {
+      color: var(--m-gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,176,122,0.35);
+    }
+    .repse-firma__datos a:hover { border-bottom-color: var(--m-gold); }
+    .prose.repse .repse-firma__legal {
+      font-size: 0.76rem;
+      line-height: 1.6;
+      color: #8FA5A8;
+      margin: 1.2rem 0 0 0;
     }
   </style>
 </head>
@@ -357,7 +386,14 @@
             <p class="repse-cta__phone">Te atendemos al instante &nbsp;·&nbsp; 56 4006 3748</p>
           </div>
 
-          <p class="repse-disclaimer">Este contenido tiene fines informativos y no constituye asesoría legal para un caso concreto.</p>
+          <div class="repse-firma">
+            <p class="repse-firma__nombre">Dayana Reyes y Abogados</p>
+            <p class="repse-firma__datos">
+              <a href="https://www.dayanareyesabogados.com">www.dayanareyesabogados.com</a><br>
+              <a href="https://wa.me/525640063748?text=Hola%2C%20me%20interesa%20recibir%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">WhatsApp: 56 4006 3748</a> &nbsp;·&nbsp; <a href="mailto:contacto@dayanareyesabogados.com">contacto@dayanareyesabogados.com</a>
+            </p>
+            <p class="repse-firma__legal">Este contenido tiene fines informativos y no constituye asesoría legal para un caso concreto.</p>
+          </div>
 
           <div style="margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
             <a href="boletin-laboral.html" class="btn btn--gold">← Volver al Boletín</a>
