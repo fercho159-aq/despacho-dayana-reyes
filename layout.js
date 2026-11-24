@@ -120,6 +120,7 @@
     + '          <ul class="nav__submenu">'
     + '            <li><a href="educacion-continua.html#cursos">Cursos</a></li>'
     + '            <li><a href="educacion-continua.html#diplomados">Diplomados</a></li>'
+    + '            <li><a href="educacion-continua.html#eventos">Eventos</a></li>'
     + '          </ul>'
     + '        </li>'
 
